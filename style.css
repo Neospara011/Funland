@@ -1,0 +1,189 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #000);
+    color: #eaeaea;
+}
+
+/* =========================
+   HERO HEADER
+========================= */
+.hero-section {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #00ffd5, #0077ff);
+    color: #001018;
+}
+
+.brand-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+    padding: 30px 16px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    background: rgba(10, 20, 30, 0.9);
+    border-radius: 18px;
+    padding: 26px 24px;
+    margin-bottom: 28px;
+    box-shadow:
+        0 0 30px rgba(0, 255, 213, 0.12),
+        inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 14px;
+    color: #00ffd5;
+    font-size: 1.5rem;
+}
+
+.intro-text,
+.cta-text {
+    text-align: center;
+    color: #b5c7d3;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   INFO CARD
+========================= */
+.info-card ol {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+    color: #dffcff;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   REQUIREMENTS
+========================= */
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.standard-card {
+    background: #0b1620;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.req-card h3 {
+    margin-bottom: 10px;
+    color: #00aaff;
+    text-align: center;
+}
+
+.req-card ul {
+    list-style: none;
+}
+
+.req-card li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.req-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00ffd5;
+}
+
+.req-card.danger h3 {
+    color: #ff6b6b;
+}
+
+.req-card.danger li::before {
+    content: "✗";
+    color: #ff6b6b;
+}
+
+/* =========================
+   CTA SECTION
+========================= */
+.cta-section {
+    text-align: center;
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 14px 34px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #00ffd5, #00aaff);
+    color: #001018;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 0 18px rgba(0,255,213,0.6);
+    transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(0,255,213,0.9);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 18px;
+    font-size: 0.8rem;
+    color: #8fa6b5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 22px 18px;
+    }
+}

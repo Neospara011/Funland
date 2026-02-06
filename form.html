@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neosfunland - Server Access Request</title>
+    <link rel="shortcut icon" href="img/SPARA.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header class="form-header">
+    <h1>Neosfunland Access Request</h1>
+    <a href="index.html" class="back-btn">← Back to Server Info</a>
+</header>
+
+<main class="form-main">
+    <section class="form-section">
+
+        <h2>Quick Access Form</h2>
+        <p>
+            Fill this form and send the request to
+            <strong>@neosfunland_admin</strong> on Instagram.
+        </p>
+
+        <!-- ⚠ CAUTION BOX (VISIBLE BEFORE CLICK) -->
+        <div class="caution-box">
+            ⚠ <strong>Please read before sending:</strong><br><br>
+
+            • When you click the button, <strong>my Instagram profile</strong> will open<br>
+            • The request message will be <strong>copied automatically</strong><br>
+            • On Instagram, tap <strong>Message</strong><br>
+            • <strong>Paste</strong> the message and tap <strong>Send</strong><br><br>
+
+            Thank you for joining Neosfunland! 🎮  
+            I’ll personally add you to the server and DM you back on Instagram.
+        </div>
+
+
+        <form id="accessForm">
+
+            <div class="input-group">
+                <label for="aternos">Aternos Username *</label>
+                <input type="text" id="aternos" required>
+            </div>
+
+            <div class="input-group">
+                <label for="minecraft">Minecraft Username *</label>
+                <input type="text" id="minecraft" required>
+            </div>
+
+            <div class="input-group">
+                <label for="instagram">Your Instagram *</label>
+                <input type="text" id="instagram" required placeholder="@yourusername">
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Send request on Instagram 📩
+            </button>
+
+        </form>
+
+    </section>
+</main>
+
+<script>
+const ADMIN_INSTAGRAM = "s_p_a_r_a_11"; // <-- your Instagram username
+
+document.getElementById("accessForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const aternos = document.getElementById("aternos").value.trim();
+    const minecraft = document.getElementById("minecraft").value.trim();
+    const instagram = document.getElementById("instagram").value.trim();
+
+    const message =
+`Neosfunland Server Join Request 🎮
+
+Aternos Username: ${aternos}
+Minecraft Username: ${minecraft}
+Player Instagram: ${instagram}
+
+Please add me to the server allowlist.`;
+
+    // Copy message to clipboard
+    navigator.clipboard.writeText(message);
+
+    // Open your Instagram profile
+    window.open(
+        "https://www.instagram.com/" + ADMIN_INSTAGRAM + "/",
+        "_blank"
+    );
+    if (!aternos || !minecraft || !instagram) {
+        alert("Please fill all required fields.");
+        return;
+    }
+});
+</script>
+
+</body>
+</html>
